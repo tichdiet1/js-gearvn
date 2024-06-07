@@ -1,0 +1,196 @@
+@charset "UTF-8";
+.accountUser-left {
+  border-color: #cfcfcf !important;
+}
+
+.js-items__converList svg path,
+.accountUser-left__link {
+  /* để line-height ở đây là vì khi cỡ chữ to lên thì không bị ảnh hưởng bởi phần tử khác */
+  line-height: 25px;
+  transition: all 0.2s ease-in-out;
+}
+
+.accountUser-left__link:hover svg path,
+.accountUser-left__link:hover,
+.js-items__converList.active svg path,
+.js-items__converList.active {
+  color: #e30019 !important;
+  fill: #e30019;
+}
+
+.js-items__converList {
+  font-size: 14px;
+  font-weight: 400;
+}
+.js-items__converList.active {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#form-accountUser {
+  width: 580px;
+}
+
+#form-fullName {
+  height: 40px;
+  border-color: #cfcfcf !important;
+  outline: none;
+}
+
+.form-group > label {
+  min-width: 165px;
+}
+
+.form-control {
+  border-color: #cfcfcf !important;
+}
+.form-control:focus {
+  box-shadow: unset !important;
+}
+
+.btn-saveChange {
+  height: 40px;
+  padding-inline: 28px;
+}
+
+.default_address.border {
+  width: 75px;
+  height: 28px;
+  border-color: #e30019 !important;
+}
+
+.accountUser-right__header {
+  border-color: #cfcfcf;
+}
+
+.btn-reset {
+  background: unset;
+  border: unset;
+}
+
+.phone_address::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 1px;
+  height: 12px;
+  background: #535353;
+}
+
+.action_setup_df {
+  line-height: 21px;
+}
+.action_setup_df.border {
+  border-color: #111 !important;
+}
+
+.js-tab-content {
+  display: none;
+}
+.js-tab-content.active {
+  animation: opacity 0.4s linear;
+  display: block;
+}
+
+.box-info__nav .box-info__item {
+  cursor: pointer;
+}
+.box-info__nav .box-info__item.active::after {
+  /** khi nào nên sài scale và khi nào nên sài scale3d
+    * nếu dùng scale bình thường thì thanh width và height sẽ từ nhỏ rồi to.
+    * nếu dùng scale 3d thì nó sẽ giữ nguyên trạng thái ban đầu width và 
+    height và chỉ có nhỏ rồi to ra.
+  */
+  transform: scale3d(1, 1, 1);
+}
+.box-info__nav .box-info__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #e30019;
+  transform: scale3d(0, 1, 1);
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.history-search .history-search__wrap {
+  border-color: #cfcfcf !important;
+  border-radius: 4px;
+}
+.history-search .history-search__wrap .search-group span {
+  left: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.history-search .history-search__wrap .search-group #search-order__input {
+  height: 40px;
+  background: none;
+  border: none;
+}
+.history-search .history-search__wrap .btn-history-search .line {
+  width: 3px;
+  height: 20px;
+  background: #cfcfcf;
+}
+
+.continue-shopping button {
+  line-height: normal;
+}
+
+.viewedlist-account .product-proloop .product-proloop-block .proloop-detail h3 a {
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+.viewedlist-account .product-proloop .product-proloop-block .proloop-detail .proloop-price .proloop-price--default .viewedlist--on-sale {
+  border-color: #e30019 !important;
+}
+
+.logOut-coating-accountUser {
+  visibility: hidden;
+}
+.logOut-coating-accountUser.logOut-coating-accountUser-js.active {
+  visibility: visible;
+}
+.logOut-coating-accountUser .logOut {
+  width: 513px;
+}
+.logOut-coating-accountUser .logOut.logOut-js {
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 0.3s;
+}
+.logOut-coating-accountUser .logOut.logOut-js.active {
+  visibility: visible;
+  animation: swal2-show 0.3s;
+  transform: translate(-50%, -50%) scale(1);
+}
+.logOut-coating-accountUser .logOut .logOut-wrap .logOut-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid #ff8a00;
+}
+.logOut-coating-accountUser .logOut .logOut-wrap .logOut-actions .btn-agree {
+  background: #e30019;
+}
+.logOut-coating-accountUser .logOut .logOut-wrap .logOut-actions .btn-agree:hover {
+  background: #cc0016 !important;
+}
+.logOut-coating-accountUser .logOut .logOut-wrap .logOut-actions .btn-no {
+  background: #ececec;
+}
+.logOut-coating-accountUser .logOut .logOut-wrap .logOut-actions .btn-no:hover {
+  background: #6e7881;
+}
+
+/*# sourceMappingURL=accountUser.css.map */

@@ -1,0 +1,101 @@
+.js-filter {
+    border-color: 1px solid rgb(207, 207, 207);
+}
+.filter-wrap {
+    gap: 8px;
+}
+.detail-title {
+    height: 40px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    line-height: 15px;
+}
+.prices-on-sale {
+    border-color:#E30019 !important;
+    line-height: 16px;
+    border-radius: 2px;
+}
+.proloop-label--bestseller {
+    padding: 2px 16px 2px 6px;
+}
+.proloop-label--bottom,
+.gift-product {
+    height: 35px;
+}
+
+.userSearch-notfount__content {
+    width: 500px;
+    margin: 0 auto;
+}
+.form-search-page {
+    height: 40px;
+}
+.search_box {
+    border-color: #000 !important;
+    border-radius: 2px;
+}
+.search_box:focus {
+    border: 2px solid #000 !important;
+}
+.form-search-page #Go {
+    background: #000;
+    color: #fff;
+    width: 100px;
+    border-radius: 2px;
+}
+/* nút xem thêm */
+.jsClick-btn {
+    height: 36px;
+}
+
+.userFilterSearch-group,
+.section-userFilterSearch,
+.section-saleProduct {
+    visibility: hidden;
+    transition-delay: 5s;
+}
+.userFilterSearch-group.active,
+.section-userFilterSearch.active,
+.section-saleProduct.active {
+    visibility: visible;
+}
+
+/* custom hiệu ứng */
+.box-Effect {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+.box-Effect.active {
+    display: block;
+}
+.loader {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+.loader span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg * var(--i)));
+}
+.loader span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #e5203e;
+    box-shadow: 0 0 10px #e5203e;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}

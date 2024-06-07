@@ -1,0 +1,32 @@
+// phải đặt mặc định là left, nếu không để mặc định mà truyền đối số include("") thì sẽ báo lỗi
+@mixin absoluteAlign($direction: "left") {
+  position: absolute;
+  @if $direction == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if $direction == "right" {
+    right: 50%;
+    transform: translateX(-50%);
+  }
+  @if $direction == "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $direction == "both" {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+  border-radius: 50%;
+}
+@mixin lineClam() {
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}

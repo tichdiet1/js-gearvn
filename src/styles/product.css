@@ -1,0 +1,272 @@
+/* slider img large */
+.product-gallery--slide {
+    width: 372px;
+    height: 310px;
+}
+.swiper-wrapper {
+    width: max-content;
+    height: 100%;
+}
+.product-gallery--item {
+    width: 351px;
+}
+/* ----slider img small---- */
+.product-thumb--group {
+    height: 86px;
+}
+.product-gallery--thumb {
+    height: 62.4px;
+    /* muốn chống chế padding của scroll thì phải thêm 1 scroll có độ lớn hơn scroll hiện tại */
+    padding: 15px 0;
+    
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* ngăn chặn khi click vào next hoặc prev thì bị khựng lại */
+    scroll-behavior: smooth;
+    /* xác định hướng căn chỉnh, cái này phụ thuộc vào scroll-snap-align: start; mà scroll-snap-align: start; đã được đặt ở item */
+    scroll-snap-type: both;
+}
+.product-gallery--thumb::-webkit-scrollbar {
+    width: 0;
+}
+.product-thumb {
+    width: 57.8px;
+    height: 51px;
+
+    /* ban đầu ng dùng kéo hình thì hình sẽ chạy lung tung, thêm code này vào thì nó sẽ dựa vào thằng đầu tiên mà căn chỉnh */
+    scroll-snap-align: start;
+}
+.product-thumb.active {
+    position: relative;
+}
+.product-thumb.active::before {
+    content: "";
+    position: absolute;
+    border: 1px solid red;
+    border-radius: 4px;
+    left: 0;
+    top: -8px;
+    width: 100%;
+    height: calc(100% + 13px);
+    
+    animation: opacity .3s linear;
+}
+/* ----btn-button arrow lớn---- */
+.click-button {
+    width: 40px;
+    height: 40px;
+    
+    /* hiệu ứng */
+    transform: translateY(-50%) scale(0);
+    transition: .3s linear;
+}
+.btn-product-left {
+    left: 10px;
+}
+.btn-product-right {
+    right: 10px;
+}
+/* btn-button arrow nhỏ */
+.click-button.btn-small {
+    width: 24px;
+    height: 24px;
+}
+/* hover vào nút btn-button của img-large and img-small */
+.btn-product-hover:hover button {
+    transform: translateY(-50%) scale(1) !important;
+}
+/* ------phần product right------ */
+.pro-price {
+    line-height: 40px;
+}
+.pro-discount {
+    line-height: 22px;
+}
+.pro-percent.border {
+    border-color:#E30019 !important;
+}
+.btn-buynow {
+    width: 55%;
+}
+.product-discount-promo-box {
+    border-color: #CFCFCF;
+}
+.box-header h2 {
+    line-height: 22px;
+}
+.dropdown-iconCheck {
+    left: 0;
+    top: 0;
+}
+/* khi mà click btn slider đến vị trí cuối cùng hoặc đầu tiên thì sẽ bị vô hiệu hóa nút button */
+.btn-button-handleEvent button:last-child.active {
+    opacity: .8;
+    cursor: default;
+}
+/* click open show image => heading */
+.toolbar-content {
+    background: rgba(0, 0, 0, 0.8);
+}
+.toolbar-content button {
+    background: transparent;
+    border: unset;
+}
+/* click open show image => slider */
+.fancybox-stage {
+    inset: 0;
+}
+.fancybox-slider {
+    width: max-content;
+}
+.fancybox-image {
+    width: 756px;
+    transition: .3s linear;
+    display: none;
+}
+.fancybox-image.active {
+    animation: effectClickImgSlider 366ms;
+    display: block;
+}
+.fancybox-btn {
+    left: 10px;
+}
+.fancybox-btn-right {
+    left: auto;
+    right: 10px;
+
+    transition: .3s linear;
+}
+.fancybox-btn-right.active {
+    right: 220px;
+}
+/* phần code chung của click open show image => slider */
+.btn-hover svg {
+    transition: .2s linear;
+}
+.btn-hover:hover svg {
+    fill: #fff !important;
+}
+.fancybox-btn.disableBtn,
+.btn-button-handleEvent button:first-child.active {
+    opacity: .8;
+    cursor: default;
+}
+
+/* click vào icon-search của clickImgLargeShowDropdow */
+.fancybox-slider.zoom-in .fancybox-image.active {
+    transform: scale(1.3);
+}
+/* click vào img thì zoom-out  */
+.fancybox-slider.zoom-in {
+    cursor: grab;
+}
+/* click vào bật pause and start để tự động hoặc ngắt tự động chạy slider của clickImgLargeShowDropdow */
+.toolbar-Start-slideshow svg {
+    display: none;
+}
+.fancybox-button--play svg:first-child,
+.fancybox-button--pause svg:last-child {
+    display: block;
+}
+/* khi click vào pause thì hiện lên progress-bar */
+.fancybox-progress-bar {
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #ff5268;
+    /* background-color: blue; */
+    transition: .2s linear;
+}
+/* ------click thumbs phần showDropdow------ */
+.fancybox-toolbar-click {
+    right: 0px;
+    transition: .3s linear;
+}
+.fancybox-toolbar-click.active {
+    right: 209px;
+    /* để transition ở đây cũng được nhưng khi mất active thì mới chạy */
+    /* transition: .3s linear; */
+}
+.fancybox-thumbs {
+    position: inherit;
+    width: 13.8%;
+    top: 0;
+    right: -210px;
+    overflow-y: auto;
+    height: 100vh;
+
+    transition: .3s linear;
+}
+.fancybox-thumbs.active {
+    right: 0;
+}
+.fancybox-thumbs__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+    gap: 4px;
+}
+/* custom scroll */
+.fancybox-thumbs::-webkit-scrollbar {
+    width: 8px;
+}
+.fancybox-thumbs::-webkit-scrollbar-track {
+    border: 3px solid #999;
+    background:#fff !important;
+    border-radius: 20px;
+    margin: 2px;
+}
+.fancybox-thumbs::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 20px;
+}
+/* click vào từng ảnh thì sẽ hiện lên border */
+.fancybox-thumbs__item.active::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 6px solid #ff5268;
+    z-index: 100;
+
+    animation: opacity .2s cubic-bezier(.25,.46,.45,.94);
+}
+
+.fancybox-coating-click,
+.fancybox-container {
+    visibility: hidden;
+    /* opacity: 0; */
+    transition: .2s linear;
+}
+.fancybox-coating-click.hide,
+.fancybox-container.hide {
+    visibility: visible;
+    /* opacity: 1; */
+}
+.fancybox-slider-wrap {
+    position: absolute;
+    transform: scale(0.4599, 0.49);
+    left: -4px;
+    top: 26px;
+    transition: .3s cubic-bezier(0.4, 0.42, 0.88, 0.63);
+}
+.fancybox-slider-wrap.active {
+    position: absolute;
+    transform: scale(1) translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
+    cursor: zoom-in;
+}
+/* ------------ */
+/* hover thì sẽ hiện toàn bộ bên showDropdow */
+/* .fancybox-heading,
+.fancybox-btn {
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear;
+}
+.fancybox-container-hover:hover .fancybox-heading.active,
+.fancybox-container-hover:hover .fancybox-btn.active {
+    opacity: 1;
+    visibility: visible;
+} */

@@ -1,0 +1,2462 @@
+@charset "UTF-8";
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+* {
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: "SF Pro Display", "Arial", sans-serif;
+}
+
+#wrapper {
+  scroll-margin-top: 1px;
+}
+
+body {
+  background: #ECECEC;
+  overflow-x: hidden;
+}
+
+.container {
+  box-sizing: content-box;
+}
+
+.item-banner {
+  background-color: rgb(216, 222, 239);
+  z-index: 104;
+}
+
+.header-content img {
+  height: 51px;
+  object-fit: cover;
+}
+
+.Logo {
+  height: 32px;
+}
+
+.category,
+.hotline,
+.Showroom,
+.search-Showroom,
+.card-showroom,
+.account {
+  height: 42px;
+}
+
+.account-content {
+  height: 40px;
+}
+
+.account-content:hover::after {
+  visibility: visible;
+}
+
+.account-content::after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 17px;
+  visibility: hidden;
+}
+
+/* code phần hover vào login thì hiện dropdown */
+.account-dropdown {
+  width: 318.4px;
+}
+
+.account-hover-dropdown:hover .account-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.account-dropdown {
+  top: 57px;
+  opacity: 0;
+  visibility: hidden;
+  transform-origin: 90% right;
+  transition: all 0.2s linear;
+}
+
+.account-dropdown::before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 10px 10px 10px 10px;
+  border-color: transparent transparent white transparent;
+  right: 29px;
+  top: -19px;
+}
+
+.account-svg {
+  width: 36px;
+  height: 42px;
+}
+
+.account-dropdown__item.list-group-item {
+  border: unset !important;
+}
+
+.account-dropdown__hoverDecoration {
+  text-decoration: none;
+}
+
+.account-dropdown__hoverDecoration:hover div {
+  text-decoration: underline;
+}
+
+.btn-hover-login {
+  height: 32px;
+}
+
+.btn-register.border {
+  border-color: #111111 !important;
+}
+
+/* hover vào trợ giúp */
+.support-wrap:hover span {
+  color: #111111;
+  text-decoration: underline;
+}
+
+.js-hide-register-errors-dropdown {
+  display: block;
+}
+
+.js-hide-register-errors-dropdown.hide {
+  display: none;
+}
+
+.js-block-register-errors-dropdown {
+  display: none;
+}
+
+.js-block-register-errors-dropdown.block {
+  display: block;
+}
+
+/* check form login */
+.js-login-show-errors {
+  display: none;
+}
+
+.js-login-show-errors.errors {
+  display: block;
+}
+
+/* ----------click vào button thì sẽ show giỏ hàng---------- */
+.card-showroom.active .clickButton-showHover {
+  display: block;
+}
+
+.clickButton-showHover {
+  right: -124px;
+  top: 58px;
+  display: none;
+}
+
+.clickButton-showHover::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  right: 162px;
+  border: 10px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.clickButton-showHover__content {
+  width: 320px;
+}
+
+.showHover__body-text {
+  width: fit-content;
+  max-width: 173px;
+}
+
+/* -------------------- */
+/* ----------handle search product---------- */
+.dropdown-search__Group {
+  height: 362px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.dropdown-search__Group::-webkit-scrollbar {
+  width: 2px !important;
+}
+
+.dropdown-search__Group::-webkit-scrollbar-track {
+  background: black;
+}
+
+.dropdown-search__Group::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, red, blue, yellow);
+}
+
+.dropdown-search__Group.active {
+  height: 40px;
+  overflow-y: unset;
+  overflow-x: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-search {
+  top: 43px;
+  /* height: 402px; */
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s linear;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.dropdown-search.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.rs-searchProduct__left {
+  width: 90%;
+}
+
+.rs-searchProduct__title a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  display: inline-block;
+}
+
+.hover-search-title a {
+  transition: all 0.2s ease-in-out;
+}
+
+.hover-search-title:hover a {
+  color: rgb(227, 0, 25) !important;
+}
+
+/* -------------------- */
+.card-showroom {
+  width: 84px;
+}
+
+.search-account .input-search {
+  flex: 100%;
+}
+
+.input-search {
+  flex: 20;
+}
+
+.input-search__content {
+  outline: none;
+}
+
+.input-search__content:focus {
+  height: 96% !important;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.holine-span,
+.Showroom-span,
+.search-span,
+.card-span,
+.account-span {
+  line-height: 1;
+}
+
+.count-card {
+  width: 18px;
+  height: 18px;
+  top: -1px;
+  right: -7px;
+}
+
+.dropdown-account {
+  width: 322px;
+  height: 147px;
+  top: 58px;
+  box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.4);
+  animation: hiddenBlock 0.5s linear;
+  transform-origin: 90% top;
+}
+
+.dropdown-account__content::before {
+  content: "";
+  position: absolute;
+  right: 46px;
+  top: -10px;
+  border: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #ffffff transparent;
+}
+
+.dropdown-logged {
+  animation: hiddenBlock 0.5s linear;
+  transform-origin: 90% top;
+}
+
+.account-content-hover:hover .dropdown-account,
+.account-content-logged:hover .dropdown-logged {
+  display: block !important;
+}
+
+.dropdown-account__bottom-hover:hover .account__bottom-text::after {
+  transform: scale(1);
+  animation: bar 2s linear;
+}
+
+.account__bottom-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scale(0);
+  transform-origin: calc(100% - 5px) top;
+  will-change: transform transform-origin;
+}
+
+.header-bottom {
+  height: 40px;
+  background: #ffffff;
+  line-height: 2.9;
+  z-index: 104;
+}
+
+.sub-link {
+  column-gap: 8px;
+}
+
+.sub-content:not(:last-child) .sub-link::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 62%;
+  background: #CFCFCF;
+  bottom: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sub-content > a > svg {
+  color: #000;
+}
+
+.sub-text {
+  font-size: 0.9rem;
+  color: #000;
+  white-space: nowrap;
+}
+
+.sub-text,
+.sub-link-hover:hover svg {
+  transition: color 0.2s linear;
+}
+
+.sub-link-hover:hover .sub-text,
+.sub-link-hover:hover svg {
+  color: #E30019;
+}
+
+main {
+  background: #ececec;
+}
+
+.logo-scroll {
+  width: 100%;
+}
+
+/* ----------Phần logged khi đã đăng ký thành công thì sẽ hiện ra hover của logged------------- */
+.dropdown-logged {
+  top: 57px;
+}
+
+.dropdown-logged__content {
+  width: 319px;
+}
+
+.dropdown-logged__content::before {
+  content: "";
+  position: absolute;
+  right: 36px;
+  top: -27px;
+  border: 14px solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.logged-hover:hover a {
+  text-decoration: underline !important;
+  background-color: #ececec;
+}
+
+.logged-hover-logOut:hover a {
+  text-decoration: underline !important;
+  background-color: #eb051e;
+}
+
+.logged-hover-hello:hover a {
+  text-decoration: underline !important;
+  background-color: #111111;
+}
+
+.logged-hover-hello:hover a svg path,
+.logged-hover-hello:hover a div {
+  color: white !important;
+  fill: #fff !important;
+}
+
+/* -----------click danh mục ở trên phần heading show dropdown------------ */
+/* khúc này phải thêm pe-none */
+.show-category {
+  position: relative;
+}
+
+.showDropdownCategory {
+  z-index: 108;
+  inset: 0;
+  visibility: hidden;
+}
+
+.showDropdownCategory::-webkit-scrollbar {
+  width: 0;
+}
+
+.showDropdownCategory.active {
+  visibility: visible;
+}
+
+.showDropdownCategory-wrap {
+  padding-top: 161px;
+  transition: all 0.25s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.showDropdownCategory-wrap.active {
+  position: relative;
+  left: -10px;
+  width: 103px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.showDropdownCategory-wrap.active.sticky {
+  padding-top: 79px;
+}
+
+/* ----------------------- */
+/* ----------------------- */
+/* muốn làm hiệu ứng thì phải xem phần tử nào được 
+thêm active thì thêm transition cho phần tử đó thì mới làm 
+được hiệu */
+.coating-category {
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.coating-category.active {
+  visibility: visible;
+}
+
+.slidebar-Group.active {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s linear;
+  left: 157px;
+  top: 176px;
+  width: 198px;
+  /* ngăn chặn sự kiện click coating danh mục */
+  /* pointer-events: none; */
+}
+
+.slidebar-Group.active.show {
+  opacity: 1;
+  visibility: visible;
+  /* top: 84px; */
+}
+
+/* ---------------------------- */
+.slidebar-Group + div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0.5s linear;
+}
+
+.slidebar-Group + div.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slidebar-menu.active {
+  color: white !important;
+  background: #ea1c04 !important;
+}
+
+.slidebar-menu.active:hover .dropdown-listContainer,
+.slidebar-menu.active:hover::before {
+  display: block;
+}
+
+.slidebar-menu.active::before {
+  content: "";
+  position: absolute;
+  right: -32px;
+  border-style: solid;
+  border-width: 16px;
+  border-color: transparent transparent transparent #ea1c04;
+  z-index: 105;
+  display: none;
+}
+
+.slidebar-menu.active .menu__Icon svg path,
+.slidebar-menu.active .menu__Icon span,
+.slidebar-menu.active .sliderBar-list > svg {
+  color: white !important;
+}
+
+.dropdown-listContainer {
+  width: 990px;
+  left: 200px;
+  display: none;
+}
+
+.listContainer-container {
+  width: 977px;
+}
+
+.hover-dropdownLinkList {
+  transition: 0.2s linear;
+}
+
+.hover-dropdownLinkList:hover {
+  color: #E30019 !important;
+}
+
+.carousel-group {
+  height: 511px;
+}
+
+.carousel {
+  height: 354px;
+}
+
+.btns span {
+  transition: 0.3s;
+}
+
+.btns span:first-child {
+  left: 24px;
+}
+
+.btns span:last-child {
+  right: 24px;
+}
+
+.carousel-imgs {
+  transition: 0.5s linear;
+}
+
+.dots-Group {
+  bottom: 25px;
+}
+
+.dots-carousel {
+  column-gap: 8px;
+}
+
+.dots-item {
+  width: 20px;
+  height: 4px;
+  transition: 0.3s;
+}
+
+.dots-item.active {
+  background: #E30019;
+}
+
+.item-banner-carousel.d-none {
+  animation-delay: 1s;
+}
+
+.item-banner-carousel.d-block {
+  animation: sliderbannerImg 2s linear;
+}
+
+.menu__Icon-text {
+  white-space: nowrap;
+  font-size: 13px;
+  padding-left: 7px;
+}
+
+.btn-arrow {
+  width: 32px;
+  height: 32px;
+  transform: translateY(-50%);
+  top: 44%;
+  background: #ECECEC;
+  box-shadow: 0px 0px 4.80687px rgba(0, 0, 0, 0.2);
+  z-index: 102;
+}
+
+.btn-arrow:hover svg {
+  transition: 0.1s linear;
+}
+
+.btn-arrow:hover svg {
+  fill: #BE1529;
+}
+
+.btn-arrowLeft {
+  left: 4px;
+}
+
+.btn-arrowRight {
+  right: 4px;
+}
+
+.btn-arrowRight {
+  right: 0;
+}
+
+.wrapper-flashsale__heading {
+  background: #ed1e2b;
+}
+
+.box-heading__title svg {
+  animation: lightning 1s linear infinite;
+}
+
+.box-heading__text {
+  color: #FFEE12;
+  font-style: italic;
+}
+
+.box-heading__text:hover {
+  color: #FFEE12;
+  font-style: italic;
+}
+
+/* from to là hướng đi 1 chiều */
+/* còn 0% là hướng đi chiều đi và về */
+.wrapper-Labtop__discount {
+  /* bg-position/bg-size bg-repeat */
+  height: 91%;
+  background: url(https://file.hstatic.net/200000722513/file/background_bg_789c681c5e7c46198ba2b8947f6ddd24.jpg) center/cover no-repeat;
+}
+
+.wrapper-Labtop__discount > .row {
+  height: 96%;
+}
+
+.wrapper-Labtop__discount img {
+  height: 159px;
+}
+
+.proloop-name {
+  font-size: 14px;
+}
+
+.proloop-name a {
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  font-weight: 600;
+  width: 195px;
+}
+
+.proloop-text {
+  color: #ed1e2b;
+}
+
+/* tham số thứ 3 là tk quyết định border */
+div.proloop-discount {
+  border-color: #ea1c04 !important;
+  color: #ed1e2b;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.proloop-progress {
+  background: #ff8d9b;
+  border-radius: 16px;
+}
+
+.proloop-sold {
+  background: #BE1529;
+  border-radius: 16px;
+}
+
+.proloop-price {
+  font-size: 13px;
+}
+
+.proloop-img {
+  transition: transform 0.5s linear;
+}
+
+.proloop-hover:hover .proloop-img {
+  transform: scale(1.2);
+}
+
+.banner-discount {
+  transition: 0.5s;
+  width: 2280px;
+  height: 382px;
+}
+
+.slider-banner-discount :where(.btn-banner-left, .btn-banner-right) {
+  width: 32px;
+  height: 32px;
+  left: -12px;
+}
+
+.btn-banner-right {
+  left: auto;
+  right: -12px;
+}
+
+.btn-banner-left:focus,
+.btn-banner-right:focus {
+  box-shadow: none !important;
+}
+
+.btn-banner-left:hover svg,
+.btn-banner-right:hover svg {
+  fill: #BE1529;
+}
+
+.carousel-indicators button[type] {
+  width: 25px;
+}
+
+.headingPC-title::after,
+.headinglaptopgaming-title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 75%;
+  background: #CFCFCF;
+}
+
+.hedingPC-hover,
+.hedinglaptopgaming-hover {
+  transition: color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hedingPC-hover:hover,
+.hedinglaptopgaming-hover:hover {
+  color: #BE1529 !important;
+}
+
+.hedingPC-link:hover,
+.headinglaptopgaming-link:hover {
+  text-decoration: underline !important;
+  color: #BE1529 !important;
+}
+
+.hedingPC-list {
+  column-gap: 38px;
+}
+
+.headinglaptopgaming-list {
+  column-gap: 29px;
+}
+
+.detai-products__container::-webkit-scrollbar {
+  display: none;
+}
+
+.detai-products__container {
+  scroll-behavior: smooth;
+  scroll-snap-type: both;
+}
+
+.detal-ProductGroup {
+  width: 249px;
+  scroll-snap-align: start;
+  box-shadow: inset 1px 0px 0px #EDEDED, inset -1px 0px 0px #EDEDED, inset 0px 1px 0px #EDEDED, inset 0px -1px 0px #EDEDED;
+}
+
+.detal-ProductGroupcol {
+  width: 248px !important;
+}
+
+div.describeGroup-title-PCRun {
+  height: 40px;
+}
+
+.self-LapTopOffice {
+  left: 5px;
+}
+
+/* ----------------------------- */
+.grid-img {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.grid-img.active {
+  opacity: 1;
+}
+
+.grid-img-scroll {
+  opacity: 0;
+  transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.grid-img-scroll.active {
+  opacity: 1;
+}
+
+.image-main > img {
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.image-main > img:hover {
+  transform: scale(1.2);
+}
+
+.selling-undefined {
+  height: 42px;
+}
+
+.grid-null {
+  height: 20px;
+}
+
+.selling-title {
+  height: 62px;
+}
+
+.grif-hot {
+  background: #e30019;
+  border-radius: 30px;
+  padding-block: 2px;
+}
+
+.grif-text {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.pre-order {
+  background: #ececec;
+}
+
+.describeGroup-title {
+  height: 40px;
+}
+
+.describeGroup-card {
+  font-size: 14px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  font-weight: 500;
+}
+
+.describeGroup-ramGroup {
+  background: #ececec;
+}
+
+span.price-sale {
+  border-color: #E30019 !important;
+}
+
+.buyALot {
+  bottom: -20px;
+}
+
+.buyALot-image {
+  height: 62px;
+}
+
+.hedingProduct-null {
+  height: 20px;
+}
+
+.self-null {
+  height: 38px;
+}
+
+.describeGroup-ramGroup {
+  column-gap: 15px;
+}
+
+.right-advertisement {
+  row-gap: 18px;
+}
+
+.hoverTitle-portfolio {
+  transition: color 0.4s linear;
+}
+
+.hoverTitle-portfolio:hover {
+  color: #E30019;
+}
+
+.link-portfolio {
+  width: 115px;
+}
+
+.link-portfolio img {
+  width: 64px;
+  height: 64px;
+}
+
+.bottom-portfolio,
+.technology-img {
+  column-gap: 5px;
+}
+
+.pageslist-box,
+.wrapperTechnology-content {
+  height: 140px;
+  column-gap: 17px;
+}
+
+.technology-link__title {
+  width: 276px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  transition: color 0.4s linear;
+}
+
+.technology-link__title:hover {
+  color: #BE1529 !important;
+}
+
+.footerTitle-link {
+  min-width: 76px;
+}
+
+.titleFooter-undefined {
+  height: 22px;
+}
+
+.footerTitle-hover {
+  white-space: nowrap;
+}
+
+.footerTitle-hover:hover {
+  color: #BE1529 !important;
+  text-decoration: underline !important;
+}
+
+.shippingUnit-img img {
+  height: 30px;
+}
+
+.copyright-firmGroup {
+  column-gap: 13px;
+}
+
+.copyright-firmGroup a img {
+  height: 32px;
+}
+
+.copyright-link img {
+  height: 52px;
+}
+
+.btn-advertisement {
+  width: 102px;
+  height: 301px;
+  left: 0;
+  top: 50%;
+  transition: 0.2s linear;
+}
+
+.sticky-advertisement {
+  top: 378px;
+}
+
+.btn-advertisement:last-child {
+  left: auto;
+  right: 0 !important;
+}
+
+.sticky-advertisement.active .btn-advertisement {
+  top: -115px !important;
+}
+
+/* --------------hiệu ứng thời gian----------- */
+.saleProduct-time {
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.saleProduct-day.highlight,
+.saleProduct-hour.highlight,
+.saleProduct-minute.highlight,
+.saleProduct-second.highlight {
+  animation: opacity 0.3s linear;
+}
+
+/* ----------------------------- */
+/* ------------------- *
+/* -----------BUILD PC NHẬN QUÀ LÊN ĐẾN 20 TRIỆU!!!------------- */
+.section-BUILDPC .container {
+  width: 1218px !important;
+}
+
+.product-body {
+  background: url(/DAJS/src/assets/images/BUILDPC-background.webp) no-repeat;
+  background-size: cover;
+}
+
+.width-slider {
+  width: calc(26% - 2px) !important;
+}
+
+.iconSold {
+  position: absolute;
+  left: 10px;
+  top: -4px;
+}
+
+/* ----------product-detail-------- */
+.progress-group {
+  width: 77%;
+  border-radius: 20px;
+}
+
+.progressSold {
+  width: 85%;
+  border-radius: 20px;
+  background: #E30019;
+}
+
+.product-title a {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  height: 35px;
+  line-height: 1.3;
+}
+
+.product-title:hover a {
+  color: #333333 !important;
+}
+
+.price-currentPrice > div {
+  border: 1px solid #E30019;
+  line-height: 0.9;
+  border-radius: 4px;
+  /* width: 46px; */
+  background: #FFEDED;
+  color: #E30019;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.progress-icon {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #E30019;
+  display: inline-block;
+}
+
+.progress-title {
+  height: 20px;
+}
+
+/* -----------custom slider slick------------ */
+.slick-slide {
+  margin-right: 4px;
+}
+
+.image-slider {
+  left: 20px;
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-dots li {
+  list-style: none;
+}
+
+.slick-dots li button {
+  background: transparent;
+  border: none;
+  font-size: 0;
+  width: 10px;
+  height: 2px;
+  background: rgba(225, 255, 255, 0.7);
+}
+
+.slick-dots li:not(:nth-child(1)) button {
+  margin-left: 4px;
+}
+
+.slick-active button {
+  background: #ffec39 !important;
+}
+
+/* ----------------------- */
+/* -----------button------------ */
+.button {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border-radius: 50%;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 105;
+  border: unset;
+  background: #ECECEC;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.button-next {
+  left: auto;
+  right: -15px;
+}
+
+.hover-button:hover {
+  background: #dadada !important;
+}
+
+.hover-button:hover svg {
+  fill: #E30019;
+  transition: 0.3s;
+}
+
+.btn-clickmonopoly {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.btn-clickmonopoly.active {
+  background: white !important;
+  color: #000 !important;
+  animation: customMonopoly 0.5s linear;
+}
+
+/* ----------------------- */
+/* -----------SẢN PHẨM ĐỘC QUYỀN - BÁN CHẠY------------ */
+.detail-title {
+  height: 34px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+.detail-title:hover a {
+  color: #333333;
+}
+
+.detail-describe {
+  column-gap: 7px;
+  line-height: 1.2;
+}
+
+/* ----------------------- */
+/* ----------------------- */
+/* ----------section-productsMain------------- */
+.box-subHeader::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: #97999D;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hover-text,
+.hover-decoration {
+  transition: 0.4s;
+}
+
+.hover-text:hover {
+  color: #E30019 !important;
+}
+
+.hover-decoration:hover {
+  color: #E30019 !important;
+  text-decoration: underline !important;
+}
+
+.proloop {
+  height: 518.1px !important;
+}
+
+.proloop-block {
+  box-shadow: inset 1px 0px 0px #EDEDED, inset -1px 0px 0px #EDEDED, inset 0px 1px 0px #EDEDED, inset 0px -1px 0px #EDEDED;
+  border: 1px solid #EDEDED;
+}
+
+.sticker_left_bottom {
+  left: 0;
+  bottom: -4px;
+}
+
+.proloop-label {
+  height: 35px;
+}
+
+.proloop-title {
+  color: #333333;
+  height: 33px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+.proloop-technical {
+  column-gap: 9px;
+  row-gap: 2px;
+}
+
+.proloop-label--on-sale {
+  border: 1px solid #E30019;
+}
+
+.tag-gifthot {
+  width: 108.603px;
+}
+
+.tag-gifthot.active {
+  width: fit-content;
+}
+
+.tag-preOrder {
+  width: 57.663px;
+}
+
+.h1057 {
+  height: 1057px;
+  /* padding-left: 8px;
+  padding-right: 4px; */
+}
+
+.slick-list {
+  height: 100% !important;
+}
+
+/* ----------------------- */
+.column-gap6px {
+  column-gap: 8px;
+}
+
+.filter-table-chair.active,
+.filter-mouse.active,
+.filter-keyboard.active,
+.filter-screen.active,
+.filter-software-earphone.active {
+  font-weight: 700;
+  background: white;
+  animation: sliderbannerImg 0.5s linear;
+}
+
+.body__detail-sold {
+  line-height: 2;
+  width: 87%;
+}
+
+.detail-sold__content {
+  width: 80%;
+}
+
+.filter-slider__width {
+  width: 2371px;
+  height: 374px;
+}
+
+.filter-handleSlider {
+  width: 16%;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.filter-handleSlider:nth-of-type(1) {
+  left: -52%;
+  opacity: 0;
+}
+
+.filter-handleSlider:nth-of-type(2) {
+  left: -34.5%;
+  opacity: 0;
+}
+
+.filter-handleSlider:nth-of-type(3) {
+  left: -17.6%;
+  opacity: 0;
+}
+
+.filter-handleSlider:nth-of-type(4) {
+  left: 0.3%;
+}
+
+.filter-handleSlider:nth-of-type(5) {
+  left: 16.8%;
+}
+
+.filter-handleSlider:nth-of-type(6) {
+  left: 33.4%;
+}
+
+.filter-handleSlider:nth-of-type(7) {
+  left: 50.2%;
+}
+
+.filter-handleSlider:nth-of-type(8) {
+  left: 66.7%;
+}
+
+.filter-handleSlider:nth-of-type(9) {
+  left: 83.3%;
+}
+
+.filter-handleSlider:nth-of-type(10) {
+  left: 102.3%;
+  opacity: 0;
+}
+
+.filter-handleSlider:nth-of-type(11) {
+  left: 119.3%;
+  opacity: 0;
+}
+
+.filter-handleSlider:nth-of-type(12) {
+  left: 137%;
+  opacity: 0;
+}
+
+/* --------------------- */
+/* --------------------- */
+.TableChair-left,
+.TableChair-right,
+.mouse-left,
+.mouse-right,
+.Keyboard-left,
+.Keyboard-right,
+.flashSale-left,
+.flashSale-right {
+  width: 32px;
+  height: 32px;
+  outline: none;
+}
+
+.TableChair-left:focus,
+.TableChair-right:focus,
+.mouse-left:focus,
+.mouse-right:focus,
+.Keyboard-left:focus,
+.Keyboard-right:focus,
+.flashSale-left:focus,
+.flashSale-right:focus {
+  box-shadow: unset !important;
+}
+
+.TableChair-right,
+.mouse-right,
+.Keyboard-right,
+.flashSale-right {
+  right: 17px;
+}
+
+.flashSaleTableChair,
+.flashSaleMouse,
+.flashSaleKeyboard,
+.flashSaleScreen,
+.flashSale-Slider {
+  display: none;
+}
+
+.flashSaleTableChair.active,
+.flashSaleMouse.active,
+.flashSaleKeyboard.active,
+.flashSaleScreen.active,
+.flashSale-Slider.active {
+  display: block;
+  animation: sliderbannerImg 1s linear;
+}
+
+.filter-screen__group {
+  width: 200px;
+  height: 374px;
+}
+
+.flashSaleTableChair-product,
+.flashSaleMouse-product,
+.flashSaleKeyboard-product {
+  height: 374px;
+}
+
+.filter-TableChair__group,
+.filter-Mouse__group,
+.filter-keyboard__group {
+  position: absolute;
+  height: 351px;
+  width: 191px;
+  transition: 0.3s;
+}
+
+.flashSaleTableChair {
+  overflow: hidden;
+}
+
+.filter-TableChair__group:nth-child(1),
+.filter-Mouse__group:nth-child(1),
+.filter-keyboard__group:nth-child(1) {
+  left: 0%;
+}
+
+.filter-TableChair__group:nth-child(2),
+.filter-Mouse__group:nth-child(2),
+.filter-keyboard__group:nth-child(2) {
+  left: 16.7%;
+}
+
+.filter-TableChair__group:nth-child(3),
+.filter-Mouse__group:nth-child(3),
+.filter-keyboard__group:nth-child(3) {
+  left: 33.5%;
+}
+
+.filter-TableChair__group:nth-child(4),
+.filter-Mouse__group:nth-child(4),
+.filter-keyboard__group:nth-child(4) {
+  left: 50.4%;
+}
+
+.filter-TableChair__group:nth-child(5),
+.filter-Mouse__group:nth-child(5),
+.filter-keyboard__group:nth-child(5) {
+  left: 67%;
+}
+
+.filter-TableChair__group:nth-child(6),
+.filter-Mouse__group:nth-child(6),
+.filter-keyboard__group:nth-child(6) {
+  left: 83.6%;
+}
+
+.filter-TableChair__group:nth-child(7),
+.filter-Mouse__group:nth-child(7),
+.filter-keyboard__group:nth-child(7) {
+  left: 101.6%;
+}
+
+.filter-TableChair__group:nth-child(8),
+.filter-Mouse__group:nth-child(8),
+.filter-keyboard__group:nth-child(8) {
+  left: 118.5%;
+}
+
+.filter-TableChair__group:nth-child(9),
+.filter-Mouse__group:nth-child(9),
+.filter-keyboard__group:nth-child(9) {
+  left: 135.5%;
+}
+
+.filter-TableChair__group:nth-child(10),
+.filter-Mouse__group:nth-child(10),
+.filter-keyboard__group:nth-child(10) {
+  left: 152.6%;
+}
+
+.filter-TableChair__group:nth-child(11),
+.filter-Mouse__group:nth-child(11),
+.filter-keyboard__group:nth-child(11) {
+  left: 169.6%;
+}
+
+.filter-TableChair__group:nth-child(12),
+.filter-Mouse__group:nth-child(12),
+.filter-keyboard__group:nth-child(12) {
+  left: 186.6%;
+}
+
+/* ------------------------ */
+.pagesList-main:not(:last-child) {
+  padding-bottom: 30px;
+}
+
+.pagesList-main:not(:first-child) {
+  padding-bottom: 80px;
+}
+
+.pagesList-image {
+  height: 140px;
+}
+
+.pagesList-image {
+  line-height: 1.5;
+}
+
+.pagesList-main:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 98%;
+  height: 1px;
+  background: #ECECEC;
+}
+
+.hover-detail,
+.hover-figcaptionPageList {
+  transition: 0.3s;
+}
+
+.hover-figcaptionPageList:hover {
+  color: #E30019 !important;
+}
+
+.hover-detail:hover {
+  color: #E30019 !important;
+}
+
+.wrapper-footer .footer-col:not(:nth-child(3)) {
+  width: 18% !important;
+}
+
+.wrapper-footer .footer-col:nth-child(3) {
+  width: 22% !important;
+}
+
+.wrapper-footer .footer-col:nth-child(4) {
+  flex: 1;
+}
+
+/* ---------- */
+/* làm hiệu ứng */
+/* đầu tiên thì chat-wrap phải có active */
+.chat-wrap {
+  position: relative;
+  bottom: 0;
+  width: 320px;
+  padding-left: 30px;
+  padding-right: 8px;
+  background-color: rgb(239, 27, 40);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  line-height: 1.8;
+  visibility: hidden;
+}
+
+.chat-wrap.active {
+  animation: chat 2s cubic-bezier(0.24, 0.21, 0.3, 0.86);
+  visibility: visible;
+}
+
+.show-chat {
+  overflow: hidden;
+  width: 320px;
+  border-radius: 14px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
+  bottom: -450px;
+  transition: 0.4s linear;
+}
+
+.show-chat.active {
+  bottom: 20px;
+}
+
+.show-chat--heading {
+  background-color: rgb(239, 27, 40);
+  padding: 15px 27px;
+}
+
+.chat--heading__text {
+  margin-left: 10px;
+  line-height: 1.2;
+}
+
+.show-chat--body {
+  height: 315px;
+  scroll-behavior: smooth;
+}
+
+.box-chat__hour {
+  max-width: 187px;
+}
+
+/* ------------phần này dùng để check tin nhắn cuối cùng------------ */
+.box-chat__content:not(:nth-child(1))::after {
+  content: "";
+  position: absolute;
+  background: url(/DAJS/src/assets/footer/hinh-1-chat.png) no-repeat;
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  bottom: 8px;
+  left: -44px;
+}
+
+/* ------------------------ */
+.chat--footer-left textarea {
+  outline: none;
+  /* nếu để height ở đây thì sẽ tự động nhận padding */
+  height: 26px;
+  scrollbar-width: thin; /* Thiết lập độ rộng của thanh kéo */
+  scrollbar-color: transparent transparent; /* Thiết lập màu của thanh kéo */
+  overflow: auto;
+  padding-left: 30px;
+}
+
+.chat--footer-icons {
+  column-gap: 11px;
+}
+
+.chat--footer-right {
+  width: 44px;
+  flex-basis: 27%;
+}
+
+.backtotop-chat {
+  width: 40px;
+  height: 40px;
+  bottom: 80px;
+  right: 30px;
+  background-color: rgb(245, 245, 245);
+  min-height: 36px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+}
+
+.backtotop-chat.active {
+  transform: scale(0) !important;
+  transition: transform 100ms linear;
+}
+
+.backtotop-chat svg {
+  fill: rgb(143, 163, 174);
+}
+
+.list-select-wrap {
+  max-width: 138px;
+  border-color: 1px solid rgb(207, 207, 207) !important;
+}
+
+.list-select-AI:not(:last-child) {
+  border-color: rgba(234, 234, 234, 0.87) !important;
+}
+
+.hover-list-select-AI:hover {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* --------làm hiệu ứng con chuột chưa hoàn thiện cần phải js lấy sự kiện chuột------- */
+.backtotop-chat::after,
+.backtotop-chat.hide::after {
+  content: "";
+  position: absolute;
+  bottom: 67px;
+  right: 26px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.backtotop-chat.hide::after {
+  inset: 0;
+  transform: scale(1);
+}
+
+.evaluate-chat {
+  inset: 63px 0 0 0;
+  display: none;
+}
+
+.evaluate-chat.active {
+  display: block;
+}
+
+.evaluate-chat__heading {
+  height: 283px;
+}
+
+.leave-evaluate {
+  height: 120px;
+}
+
+.leave-evaluate textarea {
+  outline: none;
+  scrollbar-width: thin; /* Thiết lập độ rộng của thanh kéo */
+  scrollbar-color: transparent transparent; /* Thiết lập màu của thanh kéo */
+  overflow: auto;
+  border-color: #c4c4c4 !important;
+}
+
+.leave-evaluate label {
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  color: rgba(0, 0, 0, 0.4) !important;
+  transition: 0.2s linear;
+}
+
+.leave-evaluate:hover textarea {
+  border: 1px solid #000000 !important;
+}
+
+.leave-evaluate textarea:focus {
+  border: 2px solid #E30019 !important;
+}
+
+.leave-evaluate textarea:not(:placeholder-shown) + label,
+.leave-evaluate textarea:focus + label {
+  top: -9px;
+  left: 10px;
+  font-size: 12px;
+  background: white;
+  padding-inline: 4px;
+  color: #E30019 !important;
+}
+
+.hover-sendAndSkip {
+  transition: 0.3s linear;
+}
+
+.hover-sendAndSkip:hover {
+  background-color: rgb(167, 18, 28) !important;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+}
+
+/* sau khi kết thúc cuộc trò truyện thì hiện lên đánh giá */
+.evaluate-chat__star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.evaluate-star {
+  transition: 0.3s;
+}
+
+.evaluate-star:hover {
+  transform: scale(1.2);
+}
+
+.evaluate-star.active:hover {
+  transform: scale(1);
+}
+
+.evaluate-star:hover ~ .evaluate-star svg {
+  fill: gold;
+}
+
+.selected svg,
+.selected ~ .evaluate-star svg {
+  fill: #ffc107;
+}
+
+/* --------------- */
+/* js */
+.like-star-content {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.like-star-staff svg {
+  transition: 0.2s linear;
+}
+
+/* .like-star-staff:hover nếu mà không dùng tk này thì tk thứ 5 sẽ không hiện lên màu được */
+/* .like-star-staff:hover ~ .like-star-staff svg {
+    fill: #ffc107;
+} */
+.selected svg,
+.selected ~ .like-star-staff svg {
+  fill: #ffc107;
+}
+
+/* ---------------kết thúc---------------- */
+/* -------khi click vào trung tâm trợ giúp-------- */
+.quickreps-content {
+  gap: 8px;
+}
+
+.quickreps-content > div {
+  height: 32px;
+  padding: 5px 12px;
+  border: 1px solid;
+  border-radius: 20px;
+}
+
+.quickreps-dropdown,
+.chat-dropdown {
+  background-color: rgba(0, 0, 0, 0.87) !important;
+  top: 44px;
+  z-index: 1;
+  transform: scale(0.8);
+  opacity: 0;
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3) !important;
+  visibility: hidden;
+  transition: box-shadow 1s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.2s;
+}
+
+/* khi người dùng gửi tin nhắn thì sẽ hiện icon like thì khi hover vào sẽ hiện */
+.chat-dropdown {
+  background: rgba(0, 0, 0, 0.55) !important;
+  top: -44px;
+  left: -74px;
+  line-height: 2.5;
+}
+
+.quickreps-dropdown::after,
+.chat-dropdown::after {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: 0;
+  width: 158px;
+  height: 14px;
+}
+
+.quickreps-item:hover .quickreps-dropdown,
+.hover-like:hover .chat-dropdown {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: initial !important;
+  visibility: visible;
+}
+
+/* --------------- */
+/* --------------- */
+/* hover vào phần gửi tin nhắn thì hover vào icon-like, icon-file, icon-smile */
+/* ở đây thì before và svg ngang cấp, before sẽ đè lên svg nên muốn svg nổi thì phải để positon-relative thì mới đè lên được */
+/* hiệu ứng click vào smile thì phóng ra sau đó ẩn đi */
+.icon-smile svg,
+.icon-like svg,
+.icon-file svg {
+  position: relative;
+  z-index: 1;
+}
+
+.icon-smile::before,
+.icon-like::before,
+.icon-file::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  /* background: red !important; */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.icon-smile.active::before,
+.icon-like.active::before,
+.icon-file.active::before {
+  animation: smileScale 0.3s linear forwards;
+  border: 4px solid rgba(0, 0, 0, 0.54);
+}
+
+.hover-rounded-circle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.hover-rounded-circle:hover::after {
+  background: #f5f5f5 !important;
+  transform: translate(-50%, -50%) scale(3.5);
+  /* background: blue; */
+}
+
+/* icon tin nhắn và gửi chat */
+.chat--footer-icons > div > span:first-child,
+.chat--footer-icons.staff-chat > div > span:first-child,
+.chat--footer-icons.staff-chat > div > span.icon-send,
+.chat--footer-icons.staff-chat.user-chat > div > span:first-child,
+.chat--footer-icons.staff-chat.user-chat > div > span.icon-file {
+  display: none;
+}
+
+.chat--footer-icons > div > span.icon-smile,
+.chat--footer-icons.user-chat > div > span.icon-send,
+.chat--footer-icons.staff-chat > div > span.icon-smile,
+.chat--footer-icons.staff-chat > div > span.icon-like,
+.chat--footer-icons.staff-chat > div > span.icon-file,
+.chat--footer-icons.staff-chat.user-chat > div > span.icon-send,
+.chat--footer-icons.staff-chat.user-chat > div > span.icon-smile,
+.chat--footer-icons.staff-chat.user-chat > div > span.icon-smile,
+.chat--footer-icons.staff-chat.user-chat > div > span.icon-like {
+  display: block;
+}
+
+/* --------------- */
+/* -------khi click vào icon-smile thì show ra toàn bộ icon-------- */
+.icon-smile__body {
+  height: 306px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.icon-smile__heading {
+  border-color: 1px solid #d9d9d9 !important;
+}
+
+/* khi hover vào icon thì sẽ hiện lên 1 thanh border ở dưới icon */
+.icon-heading-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5px;
+  background-color: rgb(174, 101, 197);
+  display: none;
+}
+
+.icon-heading-hover.active::after {
+  display: block;
+}
+
+.icon-search-button {
+  border: transparent;
+  background: transparent;
+  outline: none !important;
+  right: 12px;
+  top: 55%;
+}
+
+.smile__body-input {
+  border-color: 1px solid #d9d9d9 !important;
+  padding: 2px 0;
+  border-radius: 5px !important;
+  outline: none;
+}
+
+/* khi ô input không rỗng thì hiện icon-xmark */
+.smile__body-search.active button:first-of-type,
+.smile__body-search button {
+  display: none;
+}
+
+.smile__body-search.active button:last-of-type,
+.smile__body-search button:first-of-type {
+  display: block;
+}
+
+/* phần khi kéo scroll thì hiện chữ tương ứng theo icon */
+.smile__body-category.scroll .smile__body-title {
+  position: sticky;
+  top: 1px;
+}
+
+/* --------kết thúc------- */
+/* -------click vào smile thì show dropdown------ */
+.icon-smile__group {
+  width: 290px;
+  height: 355px;
+  max-height: 355px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px;
+  top: -339px;
+  right: 15px;
+  visibility: hidden;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: right bottom;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.icon-smile__group.active {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.icon-smile__wrap.active {
+  cursor: default;
+}
+
+/* sau khi nhân viên nhận tin nhắn thì sẽ hiện lên icon-like, khúc này làm ngôi sao đánh giá */
+.like-star-group {
+  top: -44px;
+  left: -74px;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.7);
+  transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.icon-like__wrap.active,
+.icon-file-wrap.active {
+  cursor: default;
+}
+
+.icon-like__wrap.active .like-star-group {
+  visibility: visible !important;
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* ------------- */
+/* -------click vào icon-bars thì show dropdown------ */
+.dropdown-icon-bars {
+  filter: drop-shadow(rgba(0, 0, 0, 0.32) 0px 2px 8px);
+  width: 220px;
+  max-height: 98px;
+  right: -4px;
+  visibility: hidden;
+  transform-origin: top right;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+/* ẩn hiện dropdown */
+.icon-bars.active .dropdown-icon-bars {
+  visibility: visible;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.dropdown-icon-hover-items:hover {
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* làm phầm click vào icon-sound */
+.dropdown-icon-items.active .dropdown-icon-sound svg:last-child,
+.dropdown-icon-sound svg {
+  display: none;
+}
+
+.dropdown-icon-items.active .dropdown-icon-sound svg:first-child,
+.dropdown-icon-sound svg:last-child {
+  display: block;
+}
+
+/* ------------- */
+/* ------user send message show dropdown------- */
+.dropdown-user-send {
+  right: -6px;
+  width: 220px;
+  z-index: 1;
+  top: 32px;
+  visibility: hidden;
+  transform-origin: top right;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.icon-bars.user-chat .dropdown-user-send {
+  visibility: visible;
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* làm dấu mũi tên */
+.dropdown-user-send::before {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: -16px;
+  border: 8px solid;
+  border-color: transparent transparent white transparent;
+}
+
+.userSend-item {
+  line-height: 2;
+  column-gap: 15px;
+}
+
+.hover-userSend-items:hover {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ------------- */
+/* tách chuỗi số từ vị trí thứ 2 đến thứ 4 */
+.random-idUser .active {
+  margin: 0 2px;
+}
+
+/* ------handle click userName------- */
+.dropdown-userName__body {
+  height: 87%;
+}
+
+.dropdown-userName-coating {
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3) !important;
+  visibility: hidden;
+}
+
+.dropdown-userName-coating.active {
+  visibility: visible;
+}
+
+.dropdown-userName {
+  inset: 0;
+  top: 450px;
+  z-index: 1;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.dropdown-userName.active {
+  top: 63px;
+  visibility: visible;
+}
+
+.user-name-input {
+  border-color: rgba(0, 0, 0, 0.87);
+  outline: none;
+}
+
+.user-name-label {
+  left: 14px;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  pointer-events: none;
+}
+
+.dropdown-userName__inputGroup input.user-name-input:focus {
+  border: 2px solid rgb(211, 47, 47) !important;
+}
+
+.user-name-input:not(:placeholder-shown) + label.user-name-label,
+.user-name-input:focus + label.user-name-label {
+  top: 0 !important;
+  font-size: 11px;
+  color: rgb(211, 47, 47) !important;
+}
+
+/* check focus input và blur */
+.dropdown-userName__inputGroup.error input {
+  border: 1px solid rgb(211, 47, 47) !important;
+}
+
+.dropdown-userName__inputGroup.error label {
+  color: rgb(211, 47, 47) !important;
+}
+
+.dropdown-userName__inputGroup.success label.user-name-label {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.dropdown-userName__inputGroup.success .user-name-input:hover {
+  border: 1px solid #000 !important;
+}
+
+/* css hover button */
+.btn-userName-cancel:hover {
+  background-color: rgb(79, 79, 79) !important;
+}
+
+.btn-userName-save:hover {
+  background-color: rgb(167, 18, 28) !important;
+}
+
+/* ------------- */
+/* -------dropdown kết thúc hội thoại------ */
+.f-conversation__coating {
+  visibility: hidden;
+  animation: identifier 0.3s linear;
+  transform: scale(1);
+  transition: 0.3s linear;
+}
+
+.f-conversation__coating.active {
+  transform: scale(1);
+  visibility: visible;
+}
+
+.f-conversation__content {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.f-conversation__content.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.f-conversation__wrap {
+  width: 260px;
+  height: 170px;
+}
+
+.f-conversation__cancel.border {
+  border-color: rgba(239, 27, 40, 0.506) !important;
+  color: rgb(239, 27, 40) !important;
+  background: transparent;
+  transition: 0.3s linear;
+}
+
+.hover-f-conversation__cancel:hover {
+  background: #fef6f7;
+  border-color: rgba(239, 27, 40, 0.933) !important;
+}
+
+.hover-f-conversation__end {
+  background: rgb(239, 27, 40);
+}
+
+.hover-f-conversation__end:hover {
+  background: rgb(235, 27, 39) !important;
+}
+
+/* ------------- */
+/* -------xử lý file khi gửi file img thành công sau đó click------ */
+.showCoating-click-img {
+  /* nếu để tk này là d-none thì sẽ không thể nào chạy hiệu ứng được */
+  visibility: hidden;
+}
+
+.showCoating-click-img.active {
+  visibility: visible;
+}
+
+.click-img__content {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.click-img__content.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-close-file {
+  padding: 20px 40px;
+}
+
+/* ------------- */
+/* ------ login------- */
+.account-container {
+  width: 500px;
+}
+
+.login-heading {
+  border-color: #CFCFCF !important;
+}
+
+.register-body__wrap,
+.login-body__wrap {
+  height: 40px;
+}
+
+.input-label-account {
+  left: 16px;
+  top: 50%;
+  font-size: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: 0.2s ease-in-out;
+}
+
+.focus-input-account {
+  border: 1px solid #CFCFCF !important;
+  outline: none;
+}
+
+.focus-input-account:not(:placeholder-shown) + label,
+.focus-input-account:focus + label {
+  top: 0;
+  font-size: 12px !important;
+  padding: 0 5px;
+  background-color: white;
+}
+
+.login-body__eye {
+  right: 0;
+}
+
+.js-eye-click.show .login-body__eye-on,
+.login-body__eye ion-icon {
+  display: none;
+}
+
+.js-eye-click.show .login-body__eye-off,
+.login-body__eye .login-body__eye-on {
+  display: block;
+}
+
+.forgot-password-link-hover {
+  font-style: italic;
+}
+
+.forgot-password-link-hover:hover {
+  color: #535353 !important;
+}
+
+.login-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  background: #cfcfcf;
+}
+
+.btn-social-wrap {
+  padding-top: 43px;
+}
+
+.btn-social-list {
+  height: 44px;
+}
+
+.btn-login-submit,
+.btn-register-submit {
+  height: 50px;
+}
+
+.js-click-login-coating-show,
+.js-click-register-coating-show {
+  visibility: hidden;
+}
+
+.js-click-login-coating-show.show,
+.js-click-register-coating-show.show {
+  visibility: visible;
+}
+
+.js-click-login-conten-show,
+.js-click-register-conten-show {
+  visibility: hidden;
+  opacity: 0;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s linear;
+}
+
+.js-click-login-conten-show.show,
+.js-click-register-conten-show.show {
+  opacity: 1;
+  top: 50%;
+  visibility: visible;
+}
+
+/* ------------- */
+/* -------register account------ */
+.customer-checkbox-input {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  appearance: none;
+  margin-right: 11px;
+  vertical-align: middle;
+}
+
+.customer-checkbox-input::before,
+.customer-checkbox-input::after {
+  content: "";
+  position: absolute;
+}
+
+.customer-checkbox-input::before {
+  border: 1px solid #CFCFCF;
+  border-radius: 2px;
+  inset: 0;
+}
+
+.customer-checkbox-input:checked::before {
+  border: unset;
+  background: #E30019;
+}
+
+.customer-checkbox-input::after {
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 5px;
+  /* border: 1px solid #fff; sẽ làm hiệu ứng mũi tên chạy về bị lỗi */
+  border: 1px solid;
+  border-top-style: none;
+  border-right-style: none;
+  transform: translate(-50%, -50%) rotate(-45deg) scale(0, 0);
+  transition: -webkit-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+}
+
+.customer-checkbox-input:checked::after {
+  transform: translate(-50%, -50%) rotate(-45deg) scale(1, 1);
+  border-color: #fff;
+}
+
+/* js register */
+.js-register-show-errors {
+  color: #856404;
+  background-color: #fff3cd;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  display: none;
+}
+
+.js-register-show-errors.errors {
+  display: block;
+}
+
+.js-register-show-errors.errors-email {
+  display: block;
+}
+
+.hover-color-resetPassword {
+  color: #111111;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.hover-color-resetPassword:hover {
+  color: #E30019;
+}
+
+.focus-input-account:focus {
+  border: 1px solid #66afe9 !important;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+/* ------------- */
+
+/*# sourceMappingURL=index.css.map */
